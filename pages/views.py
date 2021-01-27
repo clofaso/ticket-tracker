@@ -10,11 +10,9 @@ def home_view(request, *args, **kwargs):
 def about_view(request, *args, **kwargs):
     # return HttpResponse("<h1>Ticket Page</h1>")
     about_content = {
-        "title": "Ludens - BMTH",
-        "practice_text": "'A world covered in cables was never wired to last'",
-        "int_title": "Integer: ",
-        "practice_int": 324,
-        "practice_list": ["for loop", "iterating", "through", "an array", 324]
+        "title": "About",
+        "practice_text": "This query ticket application was created by Christine.",
+        
     }
     return render(request, "about.html", about_content)
 

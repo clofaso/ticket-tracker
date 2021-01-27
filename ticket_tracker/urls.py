@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
-    path('about/', about_view),
-    path('tickets/', ticket_detail_view),
-    path('create/', ticket_create_view),
+    path('about/', about_view, name='about'),
+    path('tickets/', ticket_detail_view, name='tickets'),
+    path('create/', ticket_create_view, name='create'),
 
 ]
