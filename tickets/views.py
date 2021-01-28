@@ -15,8 +15,8 @@ def ticket_create_view(request):
     }
     return render(request, "ticket/ticket_create.html", context)
 
-def ticket_detail_view(request):
-    obj = Ticket.objects.get(id=1)
+def ticket_detail_view(request, search_id):
+    obj = Ticket.objects.get(id=search_id)
     # context = {
     #     'title': obj.title,
     #     'description': obj.description, 
@@ -26,6 +26,13 @@ def ticket_detail_view(request):
         'object': obj
     }
     return render(request, "ticket/ticket_detail.html", context)
+
+def ticket_list_view(request):
+    queryset = Ticket.objects.all()
+    context = {
+        "object_list": queryset
+    }
+    return render(request, "ticket/ticket_list.html", context)
 
     # def ticket_create_view (request):
 #     my_ticket_form = RawTicketForm()

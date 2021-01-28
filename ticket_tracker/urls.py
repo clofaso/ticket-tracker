@@ -17,14 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 from pages.views import home_view, about_view
-from tickets.views import ticket_detail_view, ticket_create_view
+from tickets.views import ticket_detail_view, ticket_create_view, ticket_list_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('about/', about_view, name='about'),
-    path('tickets/', ticket_detail_view, name='tickets'),
+    path('tickets/', ticket_list_view, name='ticket_list'),
+    path('tickets/<int:search_id>', ticket_detail_view, name='ticket_details'),
+    path('tickets/<int:search_id>/', ticket_detail_view, name='ticket_details'),
     path('create/', ticket_create_view, name='create'),
-
 ]

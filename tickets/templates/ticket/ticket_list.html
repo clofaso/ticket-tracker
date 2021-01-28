@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Tickets Page</h1>
+<h3>All tickets listed below</h3>
+
+{% for element in object_list %}
+    <p>{{ element.id }}. <a href='/tickets/{{ element.id }}'>{{element.title}}</a></p>
+
+{% endfor %}
+
+{% endblock %}
