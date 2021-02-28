@@ -6,9 +6,50 @@
 <h1>Tickets Page</h1>
 <h3>All tickets listed below</h3>
 
+<head>
+    <style>
+        #ticketTable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        #ticketTable td, #ticketTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        }
+
+        #ticketTable tr:nth-child(even){background-color: #f2f2f2;}
+
+        #ticketTable tr:hover {background-color: #ddd;}
+
+        #ticketTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+        }
+    </style>
+</head>
+
+<table id = "ticketTable">
+<tr>
+    <th></th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Priority</th>
+</tr>
 {% for element in object_list %}
-    <p>{{ element.id }}. <a href='/tickets/{{ element.id }}'>{{element.title}}</a></p>
+<tr>
+    <td>{{ element.id }}. <a href='/tickets/{{ element.id }}'></a></td>
+    <td><a href='/tickets/{{ element.id }}'> {{element.title}}</a></td>
+    <td>{{element.description}}</a></td>
+    <td>{{element.priority}}</a></td>
+</tr>
 
 {% endfor %}
+
+</table>
 
 {% endblock %}
