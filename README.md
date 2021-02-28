@@ -1,12 +1,6 @@
 # Ticket Tracker Application
 
-## This is a ticket tracking application designed using Django, a Python web framework. Users can create and submit new tickets, as well as view all previously submitted tickets.
-
-### Overview
-* This application was designed and implemented on a Linux. 
-* All code is written in Python 3.
-* Required version of Django is 3.1.7
-    * Please also refer to 'requirements.txt' file
+This is a ticket tracking application designed using Django, a Python web framework. Users can create and submit new tickets, as well as view all previously submitted tickets.
 
 ### Getting started
 To get started, it is recommended to create a virtual environment for any new project.
@@ -16,27 +10,24 @@ To get started, it is recommended to create a virtual environment for any new pr
 ```
 python3 -m venv envName
 ```
-*(Please replace the **'envName'** with the enviornment name of your choosing)*
+   *Feel free to replace the **'envName'** with the enviornment name of your choosing*
 
 2. Django can then be installed within the working virtal environment: 
 
 ```
-pip install Django==3.1.7
+pip install -r requirements.txt
 ```
 
 3. Download the [ticket-tracker](https://github.com/clofaso/ticket-tracker) project files to the virtual environment folder.
 
 ### Running Ticket Tracker Web Application
-1. Verify you are in the correct directory.
-    * When using `ls` command, it should display all project folders, and most importantly `manage.py`.
-
-2. To run the server and access the Ticket Tracker web application, enter the following command:
+1. To run the server and access the Ticket Tracker web application, enter the following command:
 
 ```
 python manage.py runserver
 ```
 
-3. If executed correctly, the following text should appear:
+2. If executed correctly, the following text should appear:
 
 ```
 Watching for file changes with StatReloader
@@ -49,9 +40,9 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-4. Click on the server link and a new web page will open in your browser.
+3. Click on the development server link and a new web page will open in your browser.
 
-5. Explore!
+4. Explore and create!
 
 ### Features
 * Python code
